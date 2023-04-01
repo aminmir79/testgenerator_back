@@ -36,15 +36,15 @@ Route::group(['middleware' => ['web']], function () {
           ->middleware('auth')
           ->name('logout');
 
-    Route::post('/get_sections', [ApiController::class, 'get_sections'])
+    Route::get('/get_sections', [ApiController::class, 'get_sections'])
           ->middleware('auth')
           ->name('get_sections');
 
-    Route::post('/get_topics', [ApiController::class, 'get_topics'])
+    Route::get('/get_topics', [ApiController::class, 'get_topics'])
           ->middleware('auth')
           ->name('get_topics');
         
-    Route::post('/orders', [ApiController::class, 'orders'])
+    Route::get('/orders', [ApiController::class, 'orders'])
           ->middleware('auth')
           ->name('orders');
 
@@ -52,7 +52,7 @@ Route::group(['middleware' => ['web']], function () {
           ->middleware('auth')
           ->name('send_comment');
 
-    Route::post('/get_Quiz', [ApiController::class, 'get_Quiz'])
+    Route::get('/get_Quiz', [ApiController::class, 'get_Quiz'])
           ->middleware('auth')
           ->name('post_Quiz');
 
