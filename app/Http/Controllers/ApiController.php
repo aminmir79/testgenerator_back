@@ -61,6 +61,7 @@ class ApiController extends Controller
             'topic_id'=>$request->topic_id,
             'type'=>$request->type,
             'level'=>$request->level,
+            'time'=>$request->time,
             'max_scoure'=>$request->max_scoure,
         ]);
 

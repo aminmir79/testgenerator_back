@@ -16,6 +16,7 @@ class Order extends Model
         'topic_id',
         'level',
         'type',
+        'time',
         'max_scoure',
     ];
 

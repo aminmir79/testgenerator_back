@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger("topic_id");
             $table->enum('level',['سخت','متوسط','آسان']);
             $table->enum('type',['مستمر','میان ترم','پایان ترم']);
+            $table->Integer('time');
             $table->Integer("max_scoure");
             $table->timestamps();
 
