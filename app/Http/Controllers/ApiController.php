@@ -7,6 +7,7 @@ use App\Models\Section;
 use App\Models\Topic;
 use App\Models\Order;
 use App\Models\Comment;
+use App\Models\Question;
 use Auth;
 
 
@@ -65,6 +66,13 @@ class ApiController extends Controller
             'max_scoure'=>$request->max_scoure,
         ]);
 
+        $l = $request->lectures;
+
+        $questions=Question::where('topic_id',$request->topic_id)->whereIn('lecture',$l)->where('level',$request->level)->get()->shuffle()->shuffle()->take($request->max_scoure);
+
+        $o->questions()->sync($questions);
+
+        return 1;
     }
     catch(Exception $e)
     {
