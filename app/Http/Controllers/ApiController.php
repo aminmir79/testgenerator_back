@@ -81,4 +81,10 @@ class ApiController extends Controller
 
    }
 
+   public function get_lecture(Request $request)
+   {
+        return Topic::find($request->id)->num_of_lessons;
+
+   }
+
 }

@@ -44,6 +44,10 @@ Route::group(['middleware' => ['web']], function () {
           ->middleware('auth')
           ->name('get_topics');
         
+    Route::get('/get_lecture', [ApiController::class, 'get_lecture'])
+          ->middleware('auth')
+          ->name('get_lecture');
+
     Route::get('/orders', [ApiController::class, 'orders'])
           ->middleware('auth')
           ->name('orders');
