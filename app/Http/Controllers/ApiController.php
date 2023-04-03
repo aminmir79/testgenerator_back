@@ -72,7 +72,7 @@ class ApiController extends Controller
 
         $o->questions()->sync($questions);
 
-        return 1;
+        return $o->id;
     }
     catch(Exception $e)
     {
