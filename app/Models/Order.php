@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
@@ -22,16 +23,15 @@ class Order extends Model
 
 /**
  * Get the user associated with the Order
- *
  * @return \Illuminate\Database*/
-public function user(): HasOne
+public function user(): belongsTo
 {
-    return $this->hasOne(User::class);
+    return $this->belongsTo(User::class);
 }
 
-public function topic(): HasOne
+public function topic(): belongsTo
 {
-    return $this->hasOne(Topic::class);
+    return $this->belongsTo(Topic::class);
 }
 
 /**
