@@ -76,16 +76,20 @@ class ApiController extends Controller
             <header class="header">
               <ul class="d-flex jus-flex infoList">
                 <li>نام:</li>
+                <br/>
                 <li>نام خانوادگی :</li>
+                <br/>
                 <li>موضوع :'.$order->topic->name.'</li>
+                <br/>
                 <li>زمان:'.$order->time.'</li>
+                <br/>
               </ul>
             </header>
             <div>
               <ul class="d-flex jus-flex quizList">';
               
               foreach ($order->questions as $q){
-                $file=$file.'<li>'.$q->question.' (1نمره)</li>';
+                $file=$file.'<li>'.$q->question.' (1نمره)</li><br/>';
               }
               $file=$file.'</ul></div></div></body></html>';
 
